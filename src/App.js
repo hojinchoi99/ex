@@ -8,29 +8,53 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import SimpleImageSlider from "react-simple-image-slider"
+import Modal from '@mui/material/Modal'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GroupsIcon from '@mui/icons-material/Groups';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
+import StadiumIcon from '@mui/icons-material/Stadium';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 function App() {
   const [value, setValue] = React.useState("1");
-  const handleChange = (event: React.SyntheticEvent, newValue: String) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const style = {
+    position: "fixed",
+    top: 0,
+    bottom: 0,
+    right: 0,
+    width: 300,
+    height: "100%",
+    bgcolor: "background.paper",
+  };
+
   const images = [
-    { url: "./assets/img/slider1.png" },
-    { url: "./assets/img/slider2.png" },
-    { url: "./assets/img/slider3.png" },
-    { url: "./assets/img/slider4.png" },
-    { url: "./assets/img/slider5.png" },
-    { url: "./assets/img/slider6.png" },
-    { url: "./assets/img/slider7.png" },
-    { url: "./assets/img/slider8.png" },
-    { url: "./assets/img/slider9.png" },
+    { url: require("./assets/img/slider1.png") },
+    { url: require("./assets/img/slider2.png") },
+    { url: require("./assets/img/slider3.png") },
+    { url: require("./assets/img/slider4.png") },
+    { url: require("./assets/img/slider5.png") },
+    { url: require("./assets/img/slider6.png") },
+    { url: require("./assets/img/slider7.png") },
+    { url: require("./assets/img/slider8.png") },
+    { url: require("./assets/img/slider9.png") },
   ];
   return (
     <div>
       <div style={{paddingTop: "10px", marginLeft:'25%', marginRight:'25%'}}>
         <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
           <Service_logo />
-          <Stack direction="row" justifyContent="flex-end" alignItems="flex-start" spacing={2}>
+          <Stack direction="row" justifyContent="flex-end" alignItems="flex-start">
           <Paper component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 400 }}>
             <SearchIcon />
             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="지역, 구장 이름으로 찾기"/>
@@ -39,7 +63,75 @@ function App() {
             <PersonIcon />
           </IconButton>
           <IconButton>
-            <MenuIcon />
+            <MenuIcon onClick={handleOpen}/>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <div style={{padding: "24px 32px"}}>
+                <li style={{listStyle: "none", paddingTop: "32px", paddingBottom: "12px"}}>
+                    <a href="https://www.plabfootball.com/about/" style={{textDecoration:"none", color: 'black'}}>
+                      <SportsSoccerIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "20px"}}>플랩 풋볼 소개</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.plabfootball.com/manager/apply/" style={{textDecoration:"none", color: 'black'}}>
+                      <AlternateEmailIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "20px"}}>매니저 지원</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.notion.so/plabfootball/811eae2a9f034009a1078f02d5e5ac37" style={{textDecoration:"none", color: 'black'}}>
+                      <StadiumIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "20px"}}>구장 제휴</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <hr></hr>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.plabfootball.com/cs/6/topics/" style={{textDecoration:"none", color: 'black'}}>
+                      <CampaignIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "20px"}}>공지 사항</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.plabfootball.com/cs/" style={{textDecoration:"none", color: 'black'}}>
+                      <HelpOutlineIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "20px"}}>자주 찾는 질문</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <hr></hr>
+                  </li>
+                  <li style={{listStyle: "none"}}>
+                    <span style={{fontSize: "12px"}}>SNS에서 플랩풋볼의 스토리를 들어보세요</span>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.facebook.com/plabfootball/?eid=ARCbIV7J0pdkC-eNTR8kOKz3Ce0WYjnpR9McmLlOQheslzEURQrjx5wYdcwv0SAVs3DofNPxG6_iaY_f" style={{textDecoration:"none", color: 'black'}}>
+                      <FacebookIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "16px"}}>페이스북</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.facebook.com/groups/plabfootball/" style={{textDecoration:"none", color: 'black'}}>
+                      <GroupsIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "16px"}}>페이스북 그룹</span>
+                    </a>
+                  </li>
+                  <li style={{listStyle: "none", paddingTop: "12px", paddingBottom: "12px"}}>
+                    <a href="https://www.instagram.com/plabfootball/" style={{textDecoration:"none", color: 'black'}}>
+                      <InstagramIcon />
+                      <span style={{paddingLeft: "10px", fontSize: "16px"}}>인스타그램</span>
+                    </a>
+                  </li>
+                </div> 
+              </Box>
+            </Modal>
           </IconButton>
           </Stack>
         </Stack>
@@ -49,14 +141,15 @@ function App() {
           <TabContext value={value}>
             <Box>
               <TabList onChange={handleChange}>
-                <Tab label="소셜 매치" value="1" />
-                <Tab label="구장 예약" value="2" />
-                <Tab label="팀 매치" value="3" />
+                <Tab style={{color: 'black', fontSize: "16px", fontWeight: "bold", borderColor: "yellow"}} label="소셜 매치" value="1" />
+                <Tab style={{color: 'black', fontSize: "16px", fontWeight: "bold"}} label="구장 예약" value="2" />
+                <Tab style={{color: 'black', fontSize: "16px", fontWeight: "bold"}} label="팀 리그" value="3" />
               </TabList>
             </Box>
-            <TabPanel value="1">
+            <TabPanel style={{borderColor: 'yellow'}} value="1">
               <div>
-                <SimpleImageSlider style={{borderRadius: 20}} bgColor='black' width={900} height={300} images={images} showBullets={true} autoPlay={true}/>
+                <SimpleImageSlider width={900} height={300} images={images} showBullets={true} autoPlay={true}/>
+                <hr style={{marginTop: "24px", width: "100%"}}></hr>
               </div>
             </TabPanel>
             <TabPanel value="2">Item Two</TabPanel>
