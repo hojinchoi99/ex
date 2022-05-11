@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css';
 import { ReactComponent as Service_logo } from './assets/img/logo.svg';
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from '@mui/icons-material/Person';
@@ -17,6 +18,7 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import StadiumIcon from '@mui/icons-material/Stadium';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
+
 
 function App() {
   const [value, setValue] = React.useState("1");
@@ -37,7 +39,16 @@ function App() {
     height: "100%",
     bgcolor: "background.paper",
   };
-
+  var items = [
+    {
+        name: "Random Name #1",
+        description: "Probably the most random thing you have ever seen!"
+    },
+    {
+        name: "Random Name #2",
+        description: "Hello World!"
+    }
+]
   const images = [
     { url: require("./assets/img/slider1.png") },
     { url: require("./assets/img/slider2.png") },
@@ -51,11 +62,14 @@ function App() {
   ];
   return (
     <div>
-      <div style={{paddingTop: "10px", marginLeft:'25%', marginRight:'25%'}}>
+      <div class='header'>
         <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
-          <Service_logo />
+          <Service_logo style={{paddingTop: "5px"}}/>
           <Stack direction="row" justifyContent="flex-end" alignItems="flex-start">
-          <Paper component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 400 }}>
+          <div id="mobile-search">
+            <SearchIcon style={{paddingTop: "10px"}} />
+          </div>
+          <Paper id='desktop-search' component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 400 }}>
             <SearchIcon />
             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="지역, 구장 이름으로 찾기"/>
           </Paper>
@@ -136,26 +150,34 @@ function App() {
           </Stack>
         </Stack>
       </div>
-      <div style={{marginLeft:'25%', marginRight:'25%'}}>
+      <div class='container'>
         <Box sx={{ width: "100%", typography: "body1" }}>
           <TabContext value={value}>
+            <div class='tab-bar'>
             <Box>
               <TabList onChange={handleChange}>
-                <Tab style={{color: 'black', fontSize: "16px", fontWeight: "bold", borderColor: "yellow"}} label="소셜 매치" value="1" />
-                <Tab style={{color: 'black', fontSize: "16px", fontWeight: "bold"}} label="구장 예약" value="2" />
-                <Tab style={{color: 'black', fontSize: "16px", fontWeight: "bold"}} label="팀 리그" value="3" />
+                  <Tab label="소셜 매치" value="1" />
+                  <Tab label="구장 예약" value="2" />
+                  <Tab label="팀 리그" value="3" />
               </TabList>
             </Box>
-            <TabPanel style={{borderColor: 'yellow'}} value="1">
-              <div>
-                <SimpleImageSlider width={900} height={300} images={images} showBullets={true} autoPlay={true}/>
+            </div>
+            <div class='content-one'>
+              <TabPanel value="1">
+                  <Box sx={{width: 300, height: 300, backgroundColor: '#222836'}}>
+                    <div class='content-one-slider'>
+                      <SimpleImageSlider height={300} images={images} showBullets={true} autoPlay={true}/>
+                    </div>
+                  </Box>
                 <hr style={{marginTop: "24px", width: "100%"}}></hr>
-              </div>
-            </TabPanel>
+              </TabPanel>
+            </div>
             <TabPanel value="2">Item Two</TabPanel>
-            <TabPanel value="3">
-              <img style={{borderRadius: 20, width:900, height: 300}} alt="" src={require('./assets/img/teamleague.png')}/>
-            </TabPanel>
+            <div class='content-three'>
+                <TabPanel value="3">
+                  <img style={{ borderRadius: 20}} alt="" src={require('./assets/img/teamleague.png')}/>
+                </TabPanel>
+            </div>
           </TabContext>
         </Box>
       </div>

@@ -1,0 +1,65 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.header{
+    width: 1024px;
+    margin: auto;
+    padding-top: 18px;
+}
+
+.container{
+    width: 1024px;
+    margin: auto;
+    padding-top: 8px;
+}
+
+.tab-bar button{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+.content-three img{
+    width: 100%;
+    height: auto;
+}
+
+#mobile-search{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    #desktop-search{
+        position: fixed;
+        visibility: hidden;
+    }
+    #mobile-search{
+        visibility: visible;
+    }
+    .header{
+        width: 348px;
+        margin: 0 auto;
+    }
+    .container{
+        width: 348px;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+    .content-three div{
+        padding: 15px 0;
+    }
+    .content-three img{
+        width: 348px;
+        height: auto;
+    }
+    .tab-bar button{
+        font-size: 14px;
+    }
+}
