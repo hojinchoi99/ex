@@ -1,5 +1,5 @@
 * {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
     list-style: none;
     text-decoration: none;
     border-collapse: collapse;
@@ -42,6 +42,13 @@ div.thumbs-wrapper.axis-vertical{
 .content-three img {
     width: 100%;
     height: auto;
+}
+
+table.header{
+    visibility: hidden;
+    position: fixed;
+    padding: 0;
+    margin: 0;
 }
 
 #mobile-search {
