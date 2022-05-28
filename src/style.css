@@ -1,5 +1,5 @@
 * {
-    font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     list-style: none;
     text-decoration: none;
     border-collapse: collapse;
@@ -10,14 +10,13 @@
 
 .header {
     width: 1024px;
-    margin: auto;
-    padding-top: 18px;
+    margin: 0 auto;
+    padding-top: 10px;
 }
 
 .container {
     width: 1024px;
-    margin: auto;
-    padding-top: 8px;
+    margin: 0 auto;
 }
 
 .tab-bar button {
@@ -57,8 +56,9 @@ table.header{
 
 @media screen and (min-width:768px) and (max-width:1023px) {
     .header{
-        width: 747px;
-        margin: 0 auto;
+        max-width: 747px;
+        padding: 0 20px;
+        padding-top: 10px;
     }
     .container{
         width: 747px;

@@ -1,14 +1,14 @@
-import React from 'react';
-//import { Route } from 'react-router-dom';
-import Main from './Main.js';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Main from "./Main";
+import Login from "./login";
 
-function App () {
+const App = () => {
   return (
-    <div className='App'>
-      {/* <Route exact path="/" component={Main} /> */}
-      <Main />
-    </div>
+    <Routes>
+      <Route exact path = "/" element={<Main />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
-
 export default App;

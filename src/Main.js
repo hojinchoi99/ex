@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './style.css';
 import { ReactComponent as Servicelogo } from './assets/img/logo.svg';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -79,7 +80,7 @@ const Main = () => {
         <div>
             <div class='header'>
                 <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
-                    <Servicelogo style={{paddingTop: "5px"}}/>
+                    <Link to='/'><Servicelogo style={{paddingTop: "5px"}}/></Link>
                     <Stack direction="row" justifyContent="flex-end" alignItems="flex-start">
                         <div id="mobile-search">
                             <SearchIcon style={{paddingTop: "10px"}} />
@@ -88,9 +89,11 @@ const Main = () => {
                             <SearchIcon />
                             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="지역, 구장 이름으로 찾기"/>
                         </Paper>
-                        <IconButton>
-                            <PersonIcon />
-                        </IconButton>
+                        <Link to='/login'>
+                            <IconButton>
+                                <PersonIcon />
+                            </IconButton>
+                        </Link>
                         <IconButton>
                             <MenuIcon onClick={handleOpen1}/>
                             <Modal open={open1} onClose={handleClose1} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
