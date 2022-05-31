@@ -11,10 +11,14 @@ import Modal from '@mui/material/Modal'
 import MenuList from "./util/menuList";
 import 'date-carousel/date-carousel.js'
 
+
 const Login = () => {
     const [open1, setOpen1] = React.useState(false);
     const handleOpen1 = () => setOpen1(true);
     const handleClose1 = () => setOpen1(false);
+    const [open2, setOpen2] = React.useState(false);
+    const handleOpen2 = () => setOpen2(true);
+    const handleClose2 = () => setOpen2(false);
     const style1 = {
         position: "fixed",
         top: 0,
@@ -23,6 +27,16 @@ const Login = () => {
         width: 300,
         height: "100%",
         bgcolor: "background.paper",
+    };
+    const signupModal = {
+        position: "fixed",
+        width: "450px",
+        borderRadius: "20px",
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        bgcolor: "background.paper",
+        padding: "0 15px 30px 15px",
     };
     return (
         <div>
@@ -33,13 +47,15 @@ const Login = () => {
                         <div id="mobile-search">
                             <SearchIcon style={{paddingTop: "10px"}} />
                         </div>
-                        <Paper id='desktop-search' component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 400 }}>
+                        <Paper id='desktop-search' component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 450 }}>
                             <SearchIcon />
                             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="지역, 구장 이름으로 찾기"/>
                         </Paper>
-                        <IconButton>
-                            <PersonIcon />
-                        </IconButton>
+                        <Link to='/login'>
+                            <IconButton>
+                                <PersonIcon />
+                            </IconButton>
+                        </Link>
                         <IconButton>
                             <MenuIcon onClick={handleOpen1}/>
                             <Modal open={open1} onClose={handleClose1} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
@@ -70,10 +86,10 @@ const Login = () => {
             </div>
             <div class="id-content">
                 <div class="id-slider">
-                    <img alt="" src={require('./assets/img/logimg.png')}/>
+                    <img alt="" width="100%" src={require('./assets/img/logimg.jpg')}/>
                 </div>
-                <div class="id-text">
-                    <div class="id-form">
+                <div class="id-text" style={{ height: "100%"}}>
+                    <div class="id-form" style={{ height: "75%"}}>
                         <div class="intro">
                             <span>풋살하고 싶을 땐</span><br />
                             <span style={{ color:"#2139B2", fontWeight: "700"}}>플랩풋볼</span>
@@ -86,13 +102,30 @@ const Login = () => {
                                 <input type="password" name="password" required="" id="id_password" placeholder="비밀번호"></input>
                             </div>
                             <div class="save-id">
-                                <input type="checkbox" id="saveID" value="" name="#" class="checkbox"></input><span>아이디 저장</span>
+                                <label style={{cursor:"pointer"}}>
+                                    <input type="checkbox" id="saveID" value="" name="#" class="checkbox"></input><span>아이디 저장</span>
+                                </label>
                             </div>
                             <div>
                                 <button type="submit">로그인</button>
                             </div>
-                            <span>비밀번호 찾기</span>
-                            <span>회원가입</span>
+                            <div class="id-pw">
+                                <span style={{ textAlign: "right", paddingRight: "10px" }}>비밀번호 찾기</span>
+                                <span style={{ textAlign: "left", paddingLeft: "10px" }}><span onClick={handleOpen2}>회원가입</span>
+                                    <Modal open={open2} onClose={handleClose2} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+                                        <Box sx={signupModal}>
+                                            <div style={{padding: "30px 20px", display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <Servicelogo style={{marginBottom:"20px", width:"72px", height:"30px"}}/>
+                                                <span style={{fontSize:"20px"}}>회원 가입하고 매치에 참여하세요</span>
+                                            </div>
+                                            <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
+                                                <button style={{backgroundColor:"#FEE500", padding: "15px", borderRadius: "10px", border: "none", cursor:"pointer", width: "100%", fontSize: "16px", color:"#222836"}}>카카오 계정으로 가입</button>
+                                                <Link to='/signup' style={{padding: "10px", fontSize:"14px"}}>이메일로 가입할래요</Link>
+                                            </div>
+                                        </Box>
+                                    </Modal>
+                                </span>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -85,7 +85,7 @@ const Main = () => {
                         <div id="mobile-search">
                             <SearchIcon style={{paddingTop: "10px"}} />
                         </div>
-                        <Paper id='desktop-search' component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 400 }}>
+                        <Paper id='desktop-search' component="form" sx={{ p: "1px 4px", display: "flex", alignItems: "center", width: 450 }}>
                             <SearchIcon />
                             <InputBase sx={{ ml: 1, flex: 1 }} placeholder="지역, 구장 이름으로 찾기"/>
                         </Paper>

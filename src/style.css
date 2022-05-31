@@ -88,6 +88,10 @@ table.header{
     border: 1px solid #DCE3E8;
 }
 
+.save-id{
+    margin: 10px 0px;
+}
+
 .save-id span{
     font-size: 13px;
     color: #3e5463;
@@ -95,9 +99,12 @@ table.header{
     padding: 5px;
 }
 
+input{
+    width: 455px;
+}
+
 [type=text], [type=password], select{
     border: 1px solid #DCE3E8;
-    width: 100%;
     border-radius: 10px;
     background-color: #fafafa;
     padding: 0 10px;
@@ -107,7 +114,7 @@ table.header{
 }
 
 .intro{
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-weight: 300;
     font-size: 32px;
 }
@@ -121,6 +128,18 @@ table.header{
     width: 100%;
     font-size: 16px;
     color: white;
+}
+
+.id-pw{
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.id-pw span{
+    font-size: 13px;
+    color: #3E5463;
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
