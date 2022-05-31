@@ -12,7 +12,7 @@ import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { Carousel } from 'react-responsive-carousel';
 import Modal from '@mui/material/Modal'
-import MenuList from "./util/MenuList";
+import MenuList from "./util/menuList";
 import CloseIcon from '@mui/icons-material/Close';
 import DiamondIcon from '@mui/icons-material/Diamond';
 import 'date-carousel/date-carousel.js'

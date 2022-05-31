@@ -54,6 +54,75 @@ table.header{
     visibility: hidden;
 }
 
+.id-content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.id-slider{
+    width: 460px;
+    position: fixed;
+}
+
+.id-text{
+    position: relative;
+    margin-left: 460px;
+    padding: 20px;
+}
+
+.id-form{
+    width: 480px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.checkbox{
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 22px;
+    height: 22px;
+    background: #f2f5f7;
+    border-radius: 6px;
+    border: 1px solid #DCE3E8;
+}
+
+.save-id span{
+    font-size: 13px;
+    color: #3e5463;
+    text-align: center;
+    padding: 5px;
+}
+
+[type=text], [type=password], select{
+    border: 1px solid #DCE3E8;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fafafa;
+    padding: 0 10px;
+    outline: none;
+    height: 48px;
+    margin-top: 10px;
+}
+
+.intro{
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 32px;
+}
+
+.id-text button{
+    background-color: #2139B2;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    color: white;
+}
+
 @media screen and (min-width:768px) and (max-width:1023px) {
     .header{
         max-width: 747px;

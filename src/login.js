@@ -8,7 +8,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import MenuIcon from '@mui/icons-material/Menu';
 import { IconButton, Paper, Stack, InputBase, Box } from '@mui/material';
 import Modal from '@mui/material/Modal'
-import MenuList from "./util/MenuList";
+import MenuList from "./util/menuList";
 import 'date-carousel/date-carousel.js'
 
 const Login = () => {
@@ -70,19 +70,31 @@ const Login = () => {
             </div>
             <div class="id-content">
                 <div class="id-slider">
-
+                    <img alt="" src={require('./assets/img/logimg.png')}/>
                 </div>
                 <div class="id-text">
-                    <h2>풋살하고 싶을 땐</h2>
-                    <h2>플랩풋볼</h2>
-                    <form>
-                        <input type="text" name="username" autofocus="" required="" id="id_username" placeholder="아이디 또는 이메일"></input>
-                        <input type="password" name="password" required="" id="id_password" placeholder="비밀번호"></input>
-                        <input type="checkbox" id="saveID" value="" name="#"></input><span>아이디 저장</span>
-                        <button type="submit">로그인</button>
-                        <span>비밀번호 찾기</span>
-                        <span>회원가입</span>
-                    </form>
+                    <div class="id-form">
+                        <div class="intro">
+                            <span>풋살하고 싶을 땐</span><br />
+                            <span style={{ color:"#2139B2", fontWeight: "700"}}>플랩풋볼</span>
+                        </div>
+                        <form method='post' action='/'>
+                            <div>
+                                <input type="text" name="username" autofocus="" required="" id="id_username" placeholder="아이디 또는 이메일"></input>
+                            </div>
+                            <div>
+                                <input type="password" name="password" required="" id="id_password" placeholder="비밀번호"></input>
+                            </div>
+                            <div class="save-id">
+                                <input type="checkbox" id="saveID" value="" name="#" class="checkbox"></input><span>아이디 저장</span>
+                            </div>
+                            <div>
+                                <button type="submit">로그인</button>
+                            </div>
+                            <span>비밀번호 찾기</span>
+                            <span>회원가입</span>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
