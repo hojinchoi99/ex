@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from '@mui/icons-material/Person';
 import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton, Paper, Stack, InputBase, Tab, Box, Button, FormControlLabel, FormGroup, Checkbox } from '@mui/material';
+import { IconButton, Paper, Stack, InputBase, Tab, Box, Button, FormControlLabel, FormGroup, Checkbox} from '@mui/material';
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
@@ -190,9 +190,9 @@ const Main = () => {
                                                     </Stack>
                                                 </div>
                                                 <FormGroup>
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="남자" /><hr />
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="여자" /><hr />
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="남녀 모두" /><hr />
+                                                        <FormControlLabel control={<Checkbox />} label="남자" /><hr />
+                                                        <FormControlLabel control={<Checkbox />} label="여자" /><hr />
+                                                        <FormControlLabel control={<Checkbox />} label="남녀 모두" /><hr />
                                                 </FormGroup>
                                                 <Button onClick={handleClose3} variant="contained" style={{width: "100%", margin: "55px 0 25px 0", padding: "14px"}}>적용하기</Button>
                                             </div>
@@ -211,15 +211,57 @@ const Main = () => {
                                                     </Stack>
                                                 </div>
                                                 <FormGroup>
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="비기너3 이하" /><hr />
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="아마추어2 이상" /><hr />
-                                                        <FormControlLabel control={<Checkbox defaultChecked />} label="일반" /><hr />
+                                                        <FormControlLabel control={<Checkbox />} label="비기너3 이하" /><hr />
+                                                        <FormControlLabel control={<Checkbox />} label="아마추어2 이상" /><hr />
+                                                        <FormControlLabel control={<Checkbox />} label="일반" /><hr />
                                                 </FormGroup>
                                                 <Button onClick={handleClose4} variant="contained" style={{width: "100%", margin: "55px 0 25px 0", padding: "14px"}}>적용하기</Button>
                                             </div>
                                         </Box>
                                     </Modal>
-                                </Stack>   
+                                </Stack><br />
+                                <Stack spacing={2}>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (5구장/뮌헨)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>용인 참스포츠 클럽 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:00</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 도봉 루다 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (2구장/맨유)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 5vs5 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                </Stack>
                             </TabPanel>
                         </div>
                         <TabPanel value="2">
@@ -254,6 +296,128 @@ const Main = () => {
                                         </Modal>
                                     <Button variant="outlined">예약 가능</Button>
                                     <Button variant="outlined"><DiamondIcon />프로모션</Button>
+                                </Stack><br />
+                                <Stack spacing={2}>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (5구장/뮌헨)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>용인 참스포츠 클럽 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:00</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 도봉 루다 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (2구장/맨유)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 5vs5 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (5구장/뮌헨)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>용인 참스포츠 클럽 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:00</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 도봉 루다 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (2구장/맨유)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 5vs5 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (5구장/뮌헨)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>20:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>용인 참스포츠 클럽 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:00</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 도봉 루다 풋살장</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 6vs6 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
+                                    <Stack direction="row" spacing={2} alignItems="center">
+                                        <div style={{fontSize: "15px", fontWeight: "700", padding: "15px 15px"}}>
+                                            <p>21:30</p>
+                                        </div>
+                                        <div>
+                                            <p style={{fontSize: "16px"}}>서울 용산 아이파크몰 (2구장/맨유)</p>
+                                            <span style={{fontSize: "11px"}}>남녀모두 · 5vs5 · 3파전 · 모든 레벨</span>
+                                        </div>
+                                    </Stack>
+                                    <hr style={{marginTop: "5px"}}/>
                                 </Stack>
                         </TabPanel>
                         <div class='content-three'>

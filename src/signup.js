@@ -80,49 +80,50 @@ const Login = () => {
                         </div>
                         <form method='post' action='/'>
                             <div>
-                                <label>이메일</label>
+                                <label style={{fontSize:"11px"}}>이메일</label>
                                 <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username" />
                             </div>
-                            <div>
-                                <label>비밀번호</label>
-                                <input type="password" name="password1" class="inputFull" required="" id="id_password1" />
+                            <div style={{width: "49%", float: "left"}}>
+                                <label style={{fontSize:"11px"}}>비밀번호</label>
+                                <input type="password" name="password1" class="inputFull" required="" id="id_password1" style={{width: "90%"}}/>
                             </div>
-                            <div>
-                                <label>비밀번호 확인</label>
-                                <input type="password" name="password1" class="inputFull" required="" id="id_password2" />
+                            <div style={{width: "49%", float: "left", marginLeft: "2%", marginBottom: "20px"}}>
+                                <label style={{fontSize:"11px"}}>비밀번호 확인</label>
+                                <input type="password" name="password1" class="inputFull" required="" id="id_password2" style={{width: "90%"}}/>
                             </div>
-                            <p>매치 참여시 본인 확인 및 참여 안내톡을 보내드립니다. 이름과 휴대폰 번호를 꼭 바르게 적어주세요!</p>
-                            <div>
-                                <label>이름</label>
-                                <input type="text" name="name" class="inputFull" required="" id="id_name" />
+                            <p style={{fontSize:"11px", color:"rgb(33, 160, 100)"}}>매치 참여시 본인 확인 및 참여 안내톡을 보내드립니다.</p>
+                            <p style={{fontSize:"11px", color:"rgb(33, 160, 100)"}}>이름과 휴대폰 번호를 꼭 바르게 적어주세요!</p>
+                            <div style={{width: "49%", float: "left"}}>
+                                <label style={{fontSize:"11px"}}>이름</label>
+                                <input type="text" name="name" class="inputFull" required="" id="id_name" style={{width: "90%"}} />
                             </div>
-                            <div>
-                                <label>성별</label>
-                                <select name="sex" class="inputFull" id="id_sex">
+                            <div style={{width: "49%", float: "left", marginLeft: "2%", marginTop:"1%"}}>
+                                <label style={{fontSize:"11px", display: "inherit"}}>성별</label>
+                                <select name="sex" class="inputFull" id="id_sex" style={{width: "100%"}}>
                                     <option value="0">선택</option>
                                     <option value="1">남성</option>
                                     <option value="-1">여성</option>
                                 </select>
                             </div>
-                            <div>
-                                <label>휴대폰 번호</label>
+                            <div style={{float: "left"}}>
+                                <label style={{fontSize:"11px"}}>휴대폰 번호</label>
                                 <input type="text" name="phone" required="" id="id_phone" />
                             </div>
-                            <div class="input3Wrap">
-                                <label>생년월일</label>
-                                    <select name="birthday_year" required="" id="id_birthday_year">
+                            <div class="input3Wrap" style={{marginBottom: "20px"}}>
+                                <label style={{fontSize:"11px", display: "inherit"}}>생년월일</label>
+                                    <select name="birthday_year" required="" id="id_birthday_year" style={{width: "32%", display: "inline-block", marginRight: "2%"}}>
                                         <option value="1991">1991</option><option value="1992">1992</option><option value="1993">1993</option><option value="1994">1994</option>
                                         <option value="1995">1995</option><option value="1996">1996</option><option value="1997">1997</option><option value="1998">1998</option>
                                         <option value="1999">1999</option><option value="2000">2000</option><option value="2001">2001</option><option value="2002">2002</option>
                                         <option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option>
                                         <option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option>
                                     </select>
-                                    <select name="birthday_month" required="" id="id_birthday_month">
+                                    <select name="birthday_month" required="" id="id_birthday_month" style={{width: "32%", display: "inline-block", marginRight: "2%"}}>
                                             <option value="1" selected="">1월</option><option value="2">2월</option><option value="3">3월</option><option value="4">4월</option>
                                             <option value="5">5월</option><option value="6">6월</option><option value="7">7월</option><option value="8">8월</option>
                                             <option value="9">9월</option><option value="10">10월</option><option value="11">11월</option><option value="12">12월</option>
                                     </select>
-                                    <select name="birthday_day" required="" id="id_birthday_day">
+                                    <select name="birthday_day" required="" id="id_birthday_day" style={{width: "32%", display: "inline-block"}}>
                                         <option value="1" selected="">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
                                         <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
                                         <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
@@ -134,11 +135,11 @@ const Login = () => {
                                     </select>
                             </div>
                             <div>
-                                <label style={{cursor:"pointer"}}>
-                                    <input type="checkbox" id="saveID" value="" name="#" class="checkbox"></input><span>약관 정책</span>
+                                <label style={{cursor:"pointer", fontSize: "14px"}}>
+                                    <input type="checkbox" id="saveID" value="" name="#" class="checkbox"></input><span>플랩풋볼 <a href="/term/" target="_blank">서비스 이용 약관</a> 및 <a href="/privacy/" target="_blank">개인 정보 수집 및 이용</a>에 동의합니다.</span>
                                 </label>
                             </div>
-                            <div>
+                            <div style={{marginTop: "20px"}}>
                                 <button type="submit">회원 가입</button>
                             </div>
                         </form>
